@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Liquidity Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1f29, #2b5876);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #00d4ff;
+        }
+        form {
+            background-color: #2e3a59;
+            padding: 25px 35px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.3);
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: none;
+        }
+        button {
+            background-color: #00d4ff;
+            color: #1e1f29;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0099cc;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #00ffae;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cryptocurrency Liquidity Predictor</h1>
+    <form action="/predict" method="POST">
+        <label>Trading Volume Feature:</label><br>
+        <input type="number" step="any" name="trading_volume" required><br>
+
+        <label>Transaction Pattern Feature:</label><br>
+        <input type="number" step="any" name="transaction_pattern" required><br>
+
+        <label>Exchange Listing Feature:</label><br>
+        <input type="number" step="any" name="exchange_listing" required><br>
+
+        <label>Social Media Activity Feature:</label><br>
+        <input type="number" step="any" name="social_media_activity" required><br>
+
+        <button type="submit">Predict Liquidity</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+</body>
+</html>

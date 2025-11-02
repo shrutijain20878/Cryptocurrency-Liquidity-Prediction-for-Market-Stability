@@ -1,0 +1,12 @@
+setuptools==42
+wheel
+
+Flask==3.1.2
+gunicorn==23.0.0
+
+numpy==2.3.3
+pandas==2.3.3
+scikit-learn==1.7.2
+xgboost==3.0.5
+joblib==1.5.2
+requests==2.32.5

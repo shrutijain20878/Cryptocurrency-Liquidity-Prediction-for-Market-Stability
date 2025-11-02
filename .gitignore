@@ -1,0 +1,40 @@
+# -------------------------
+# Python + Flask + ML Project
+# -------------------------
+
+# Virtual environment
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Datasets and outputs
+*.csv
+*.xlsx
+*.ods
+*.parquet
+dataset/
+data/
+output/
+logs/
+
+# Model binaries
+*.pkl
+*.joblib
+*.h5
+
+# System and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Render / Deployment build files
+*.log
